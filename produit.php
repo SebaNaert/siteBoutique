@@ -5,9 +5,9 @@ if (isset($_GET['id'])) {
 } else {
     $id = 0;
 }
-$stmt = $pdo->prepare("SELECT * FROM produits WHERE id = ?");
-$stmt->execute([$id]);
-$produit = $stmt->fetch();
+$bdd = $pdo->prepare("SELECT * FROM produits WHERE id = ?");
+$bdd->execute([$id]);
+$produit = $bdd->fetch();
 
 if (!$produit) {
     die("Produit introuvable.");

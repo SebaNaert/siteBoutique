@@ -10,8 +10,8 @@
     <h1>Nos produits</h1>
     <div class="produits">
         <?php
-        $stmt = $pdo->query("SELECT * FROM produits");
-        while ($row = $stmt->fetch()) {
+        $bdd = $pdo->query("SELECT * FROM produits");
+        while ($row = $bdd->fetch()) {
             echo '<div class="produit">';
             echo '<a href="produit.php?id=' . $row['id'] . '">';
             echo '<img src="' . $row['image'] . '" alt="' . htmlspecialchars($row['nom']) . '">';
@@ -21,6 +21,7 @@
             echo '</div>';
         }
         ?>
+        
     </div>
 </body>
 </html>
