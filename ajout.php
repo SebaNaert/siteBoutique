@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="index.php">← Retour</a>
     <h1>Ajouts</h1>
     <div class="ajout">
         <form action="treatment.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="nom">nom: </label>
                 <input type="text" name="nom" id="nom">
+            </div>
+            <div class="form-group">
+                <label for="description">Description: </label>
+                <textarea name="description" id="description"></textarea>
             </div>
             <div class="form-group">
                 <label for="prix">prix: </label>

@@ -1,19 +1,124 @@
+
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
+
+
+.ajout {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+
 .produits {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
 }
+
 .produit {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 200px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    width: 220px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
 }
+
+.produit:hover {
+    transform: translateY(-5px);
+}
+
 .produit img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.produit h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.produit p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+@media (max-width: 600px) {
+    .produits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produit {
+        width: 90%;
+    }
 }
